@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DepthNav Research | Plans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+
+    <script
+      src="https://kit.fontawesome.com/836a943e18.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav-brand">
+            <a href="index.html" class="brand">
+              <img src="assets/images/logo.JPG" alt="DepthNav Research Logo" class="logo" />
+              <span class="brand-text">DepthNav Research</span>
+            </a>
+          </div>
+
+          <div class="burger-menu-icon">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="overview.html" class="nav-link">Overview</a></li>
+            <li class="nav-item"><a href="methodology.html" class="nav-link">Methodology</a></li>
+            <li class="nav-item"><a href="results.html" class="nav-link">Results</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="plans.html" class="nav-link">Plans</a></li>
+            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+            <li class="nav-item">
+              <a href="https://github.com/aflouk0020" target="_blank" class="nav-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="plans-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Research Plans & Protocol Structure</h2>
+            <p>Global locks, sprint structure, and inherited experimental plans</p>
+          </div>
+
+          <div class="plans-intro-card">
+            <p>
+              The DepthNav Research project is organised around a master locked protocol
+              that governs dataset control, reference baselines, reproducibility rules,
+              naming conventions, and CSV-based evidence generation. All sprint plans inherit
+              these global locks, while extension plans remain subordinate to the core study
+              and do not redefine official benchmark conclusions.
+            </p>
+          </div>
+
+          <div class="master-locks-card">
+            <h3>Global Locks</h3>
+            <div class="locks-grid">
+              <div class="lock-item">
+                <h4>Master Video</h4>
+                <p>S2_Main_Approach_h264.mp4</p>
+                <p>1920×1080 · 313 frames · 30 FPS</p>
+                <p>SHA256 locked and unchanged across all plans</p>
+              </div>
+
+              <div class="lock-item">
+                <h4>Reference Baselines</h4>
+                <p>Frozen 1080p reference stacks</p>
+                <p>Used in file-reference mode</p>
+                <p>No regeneration allowed after freeze</p>
+              </div>
+
+              <div class="lock-item">
+                <h4>Outputs & CSV Rules</h4>
+                <p>All final CSV files saved in outputs/csv/</p>
+                <p>Tables and figures generated only from final CSV outputs</p>
+                <p>No manual edits to final tables or plots</p>
+              </div>
+
+              <div class="lock-item">
+                <h4>Standard Naming</h4>
+                <p>run_id: {model_label}_{backend}_{resolution}_{frames_n}_{gitsha}</p>
+                <p>Resolution strings fixed across all studies</p>
+                <p>Backend labels: cuda · mps · cpu</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="inheritance-structure-card">
+            <h3>Master Plan Inheritance Structure</h3>
+            <div class="inheritance-tree">
+              <div class="tree-node master-node">
+                <h4>Master Protocol / Global Locks</h4>
+                <p>Single source of truth for dataset, references, outputs, and naming rules</p>
+              </div>
+
+              <div class="tree-branches">
+                <div class="tree-branch">
+                  <h4>Sprint 1</h4>
+                  <div class="branch-card">
+                    <strong>Plan 1:</strong>
+                    <p>Core controlled resolution scaling study</p>
+                  </div>
+                  <div class="branch-card">
+                    <strong>Plan 2:</strong>
+                    <p>Raspberry Pi validation extension</p>
+                  </div>
+                </div>
+
+                <div class="tree-branch">
+                  <h4>Sprint 2</h4>
+                  <div class="branch-card">
+                    <strong>Plan 1:</strong>
+                    <p>Core transformer vs CNN architectural comparison</p>
+                  </div>
+                  <div class="branch-card">
+                    <strong>Plan 2:</strong>
+                    <p>Raspberry Pi CPU-only validation extension</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sprint-block">
+            <div class="sprint-header">
+              <h3>Sprint 1</h3>
+              <p>Controlled resolution scaling study with Raspberry Pi validation extension</p>
+            </div>
+
+            <div class="plans-grid">
+              <div class="plan-card">
+                <span class="plan-badge">Sprint 1 · Plan 1</span>
+                <h4>Core Study — Draft Submission</h4>
+                <p class="plan-type">Controlled experimental evaluation</p>
+
+                <ul class="plan-list">
+                  <li>Single model: Depth Anything V2 Small</li>
+                  <li>Official device: RTX 2050</li>
+                  <li>Verification device: Apple M1</li>
+                  <li>Resolutions: 1920×1080, 1280×720, 854×480</li>
+                  <li>Metrics: RMSE, AbsRel, FPS, ROI vs full-frame</li>
+                  <li>Focus: Pareto reasoning under locked transformer configuration</li>
+                </ul>
+              </div>
+
+              <div class="plan-card extension-card">
+                <span class="plan-badge">Sprint 1 · Plan 2</span>
+                <h4>Pi Validation Extension</h4>
+                <p class="plan-type">Controlled edge inference validation</p>
+
+                <ul class="plan-list">
+                  <li>Not a replacement for the RTX core study</li>
+                  <li>CPU-only Raspberry Pi execution</li>
+                  <li>Resolutions: 1280×720, 854×480, 640×360</li>
+                  <li>Same locked master video and frozen reference file</li>
+                  <li>frames_n = 30</li>
+                  <li>Purpose: directional validation and feasibility context</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="sprint-block">
+            <div class="sprint-header">
+              <h3>Sprint 2</h3>
+              <p>Architectural efficiency study with constrained CPU-only validation layer</p>
+            </div>
+
+            <div class="plans-grid">
+              <div class="plan-card">
+                <span class="plan-badge">Sprint 2 · Plan 1</span>
+                <h4>Core Study — Transformer vs CNN</h4>
+                <p class="plan-type">Controlled architectural comparison</p>
+
+                <ul class="plan-list">
+                  <li>Model A: Depth Anything V2 Small</li>
+                  <li>Model B: MiDaS Small</li>
+                  <li>Official benchmark device: RTX 2050</li>
+                  <li>Verification device: Apple M1</li>
+                  <li>Resolutions: 1920×1080, 1280×720, 854×480</li>
+                  <li>Per-model frozen 1080p reference baselines</li>
+                  <li>Purpose: architecture-driven speed–accuracy comparison</li>
+                </ul>
+              </div>
+
+              <div class="plan-card extension-card">
+                <span class="plan-badge">Sprint 2 · Plan 2</span>
+                <h4>Pi CPU Validation Extension</h4>
+                <p class="plan-type">Controlled validation extension</p>
+
+                <ul class="plan-list">
+                  <li>Not an independent benchmark</li>
+                  <li>CPU-only Raspberry Pi execution</li>
+                  <li>Resolutions: 1280×720, 854×480, 640×360</li>
+                  <li>Uses frozen RTX-generated per-model references</li>
+                  <li>frames_n = 30</li>
+                  <li>Purpose: edge feasibility and directional consistency checks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-note-card">
+            <h3>Technical Appendix Position</h3>
+            <p>
+              Detailed protocol elements such as SHA256 hashes, full CSV schemas, freeze
+              conditions, processor bypass rules, pinned revisions, and risk management logic
+              are treated as technical appendix material. The website summarises those rules in
+              a structured and readable form, while the full experimental protocol remains part
+              of the project’s formal documentation and reproducibility archive.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

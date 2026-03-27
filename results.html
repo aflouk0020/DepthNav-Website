@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DepthNav Research | Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+
+    <script
+      src="https://kit.fontawesome.com/836a943e18.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav-brand">
+            <a href="index.html" class="brand">
+              <img src="assets/images/logo.JPG" alt="DepthNav Research Logo" class="logo" />
+              <span class="brand-text">DepthNav Research</span>
+            </a>
+          </div>
+
+          <div class="burger-menu-icon">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="overview.html" class="nav-link">Overview</a></li>
+            <li class="nav-item"><a href="methodology.html" class="nav-link">Methodology</a></li>
+            <li class="nav-item"><a href="results.html" class="nav-link">Results</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="plans.html" class="nav-link">Plans</a></li>
+            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+            <li class="nav-item">
+              <a href="https://github.com/aflouk0020" target="_blank" rel="noopener noreferrer" class="nav-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="results" class="results-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Results</h2>
+            <p>Experimental findings, sprint outputs, research papers, and poster previews</p>
+          </div>
+
+          <!-- SPRINT 1 -->
+          <div class="results-sprint-header">
+            <h3>Sprint 1 — Controlled Resolution Scaling Study</h3>
+            <p>
+              Sprint 1 isolated input resolution as the sole independent variable under a
+              locked transformer-based evaluation protocol to determine whether downsampling
+              could improve deployment feasibility without architectural modification.
+            </p>
+          </div>
+
+          <div class="results-summary-grid">
+            <div class="result-summary-card">
+              <h3>Core Finding</h3>
+              <p class="result-value">No Pareto Improvement</p>
+              <p class="result-note">
+                Downsampling degraded structural consistency while throughput remained effectively unchanged.
+              </p>
+            </div>
+
+            <div class="result-summary-card">
+              <h3>Throughput Range</h3>
+              <p class="result-value">~5.42–5.46 FPS</p>
+              <p class="result-note">
+                Despite major pixel reduction, FPS remained constrained by architectural overhead.
+              </p>
+            </div>
+
+            <div class="result-summary-card">
+              <h3>Deployment Conclusion</h3>
+              <p class="result-value">Not Real-Time</p>
+              <p class="result-note">
+                No tested configuration approached the safety-relevant threshold of 15 FPS.
+              </p>
+            </div>
+          </div>
+
+          <div class="results-insight-block">
+            <h3>Sprint 1 Interpretation</h3>
+            <p>
+              Sprint 1 shows that resolution scaling alone does not shift the speed–consistency
+              frontier for the tested transformer model. Moderate downsampling preserves relative
+              consistency, but inference speed remains effectively fixed, confirming that the
+              deployment bottleneck is architectural rather than input-size driven.
+            </p>
+          </div>
+
+          <div class="charts-grid">
+            <div class="chart-card">
+              <h4>ROI RMSE vs Resolution</h4>
+              <div class="chart-placeholder">
+                <p>Insert Sprint 1 ROI RMSE figure here</p>
+              </div>
+              <p class="chart-caption">
+                Progressive degradation in safety-critical ROI consistency was observed as resolution decreased.
+              </p>
+            </div>
+
+            <div class="chart-card">
+              <h4>FPS vs Resolution</h4>
+              <div class="chart-placeholder">
+                <p>Insert Sprint 1 FPS figure here</p>
+              </div>
+              <p class="chart-caption">
+                Official RTX throughput remained effectively constant across the tested resolution band.
+              </p>
+            </div>
+
+            <div class="chart-card">
+              <h4>Speed–Accuracy Trade-Off</h4>
+              <div class="chart-placeholder">
+                <p>Insert Sprint 1 Pareto figure here</p>
+              </div>
+              <p class="chart-caption">
+                No configuration provided a meaningful speed–accuracy improvement under the locked protocol.
+              </p>
+            </div>
+
+            <div class="chart-card">
+              <h4>Protocol Diagram Placeholder</h4>
+              <div class="chart-placeholder">
+                <p>Insert Sprint 1 experimental protocol diagram here</p>
+              </div>
+              <p class="chart-caption">
+                Use this area for the visual workflow diagram or benchmark structure graphic.
+              </p>
+            </div>
+          </div>
+
+          <div class="results-table-card">
+            <h3>Sprint 1 Paper Summary</h3>
+            <p>
+              The first sprint paper, <em>Controlled Resolution Scaling Analysis for Transformer-Based
+              Monocular Depth Estimation Under Edge Deployment Constraints</em>, established that
+              controlled input downsampling does not improve real-time viability for the evaluated
+              transformer-based model under a locked reference protocol.
+            </p>
+            <div class="resource-actions">
+              <a href="#" class="btn">Download Sprint 1 Paper</a>
+            </div>
+          </div>
+
+          <div class="poster-preview-card">
+            <h3>Sprint 1 Poster</h3>
+            <p>
+              This poster summarises the first sprint study, including motivation, locked protocol,
+              controlled benchmark design, and the conclusion that input scaling alone cannot overcome
+              architectural bottlenecks.
+            </p>
+
+            <div class="poster-diagram-placeholder">
+              <p>Insert Sprint 1 poster preview or poster image here</p>
+            </div>
+
+            <div class="poster-text-summary">
+              <h4>Poster Focus</h4>
+              <ul class="resource-list">
+                <li>Problem context and deployment motivation</li>
+                <li>Controlled resolution-scaling protocol</li>
+                <li>Locked reference-based evaluation</li>
+                <li>Cross-device validation structure</li>
+                <li>Conclusion and future architectural study direction</li>
+              </ul>
+            </div>
+
+            <div class="resource-actions">
+              <a href="#" class="btn btn-secondary">Download Sprint 1 Poster</a>
+            </div>
+          </div>
+
+          <!-- SPRINT 2 -->
+          <div class="results-sprint-header">
+            <h3>Sprint 2 — Architecture-Level Trade-Off Analysis</h3>
+            <p>
+              Sprint 2 introduced model architecture as the primary independent variable and
+              compared a transformer-based model with a CNN baseline under a strictly controlled
+              and reproducible protocol.
+            </p>
+          </div>
+
+          <div class="results-summary-grid">
+            <div class="result-summary-card">
+              <h3>Accuracy Leader</h3>
+              <p class="result-value">Transformer</p>
+              <p class="result-note">
+                Depth Anything maintained ROI RMSE below 1.0 across all evaluated resolutions.
+              </p>
+            </div>
+
+            <div class="result-summary-card">
+              <h3>Speed Leader</h3>
+              <p class="result-value">19.42 FPS</p>
+              <p class="result-note">
+                MiDaS achieved the highest throughput at 854×480, but with severe structural degradation.
+              </p>
+            </div>
+
+            <div class="result-summary-card">
+              <h3>Main Conclusion</h3>
+              <p class="result-value">Architecture Dominates</p>
+              <p class="result-note">
+                Model design, not input scaling, governs the speed–consistency trade-off.
+              </p>
+            </div>
+          </div>
+
+          <div class="results-insight-block">
+            <h3>Sprint 2 Interpretation</h3>
+            <p>
+              Sprint 2 demonstrates that architecture is the dominant factor in deployment feasibility.
+              The transformer preserves structural consistency but remains too slow, while the CNN
+              improves throughput but fails to maintain acceptable reliability in the safety-critical ROI.
+              No evaluated configuration satisfied both real-time speed and acceptable structural accuracy.
+            </p>
+          </div>
+
+          <div class="charts-grid">
+            <div class="chart-card">
+              <h4>Architecture Throughput Comparison</h4>
+              <div class="chart-placeholder">
+                <p>Insert Sprint 2 throughput figure here</p>
+              </div>
+              <p class="chart-caption">
+                CNN throughput exceeded transformer performance at all resolutions, especially at 854×480.
+              </p>
+            </div>
+
+            <div class="chart-card">
+              <h4>ROI RMSE Across Architectures</h4>
+              <div class="chart-placeholder">
+                <p>Insert Sprint 2 ROI RMSE figure here</p>
+              </div>
+              <p class="chart-caption">
+                Transformer consistency remained stable, while the CNN exhibited extreme structural instability.
+              </p>
+            </div>
+
+            <div class="chart-card">
+              <h4>ROI AbsRel Across Architectures</h4>
+              <div class="chart-placeholder">
+                <p>Insert Sprint 2 ROI AbsRel figure here</p>
+              </div>
+              <p class="chart-caption">
+                Relative error remained substantially lower for the transformer across all matched resolutions.
+              </p>
+            </div>
+
+            <div class="chart-card">
+              <h4>Sprint 2 Diagram Placeholder</h4>
+              <div class="chart-placeholder">
+                <p>Insert Sprint 2 protocol / comparison diagram here</p>
+              </div>
+              <p class="chart-caption">
+                Use this placeholder for the architecture comparison workflow or poster diagram.
+              </p>
+            </div>
+          </div>
+
+          <div class="results-table-card">
+            <h3>Sprint 2 Paper Summary</h3>
+            <p>
+              The second sprint paper, <em>Architecture-Level Trade-Off Analysis for Monocular Depth
+              Estimation Under Edge Deployment Constraints</em>, shows that architectural design,
+              rather than input resolution, governs the achievable balance between inference speed
+              and structural consistency under safety-critical deployment requirements.
+            </p>
+            <div class="resource-actions">
+              <a href="#" class="btn">Download Sprint 2 Paper</a>
+            </div>
+          </div>
+
+          <div class="results-table-card">
+            <h3>Sprint 2 Benchmark Highlights</h3>
+            <div class="results-table-wrapper">
+              <table class="results-table">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Architecture</th>
+                    <th>Resolution</th>
+                    <th>FPS</th>
+                    <th>ROI RMSE</th>
+                    <th>ROI AbsRel</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Depth Anything</td>
+                    <td>Transformer</td>
+                    <td>1920×1080</td>
+                    <td>0.40</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Depth Anything</td>
+                    <td>Transformer</td>
+                    <td>1280×720</td>
+                    <td>1.80</td>
+                    <td>0.27</td>
+                    <td>0.057</td>
+                  </tr>
+                  <tr>
+                    <td>Depth Anything</td>
+                    <td>Transformer</td>
+                    <td>854×480</td>
+                    <td>6.96</td>
+                    <td>0.96</td>
+                    <td>0.191</td>
+                  </tr>
+                  <tr>
+                    <td>MiDaS</td>
+                    <td>CNN</td>
+                    <td>1920×1080</td>
+                    <td>4.09</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>MiDaS</td>
+                    <td>CNN</td>
+                    <td>1280×720</td>
+                    <td>8.73</td>
+                    <td>96.84</td>
+                    <td>0.381</td>
+                  </tr>
+                  <tr>
+                    <td>MiDaS</td>
+                    <td>CNN</td>
+                    <td>854×480</td>
+                    <td>19.42</td>
+                    <td>101.02</td>
+                    <td>0.355</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="poster-preview-card">
+            <h3>Sprint 2 Poster</h3>
+            <p>
+              The second poster will present the transformer-versus-CNN architecture comparison,
+              benchmark results, reproducibility structure, and the conclusion that no evaluated
+              configuration satisfies both real-time speed and acceptable structural reliability.
+            </p>
+
+            <div class="poster-diagram-placeholder">
+              <p>Insert Sprint 2 poster preview or comparison diagram here</p>
+            </div>
+
+            <div class="poster-text-summary">
+              <h4>Poster Focus</h4>
+              <ul class="resource-list">
+                <li>Architecture comparison under a locked protocol</li>
+                <li>Transformer vs CNN speed–accuracy trade-off</li>
+                <li>Cross-device reproducibility and validation</li>
+                <li>Edge deployment limitations</li>
+                <li>Research direction beyond input scaling</li>
+              </ul>
+            </div>
+
+            <div class="resource-actions">
+              <a href="#" class="btn btn-secondary">Download Sprint 2 Poster</a>
+            </div>
+          </div>
+
+          <div class="results-conclusion-card">
+            <h3>Overall Research Progress</h3>
+            <p>
+              Together, Sprint 1 and Sprint 2 establish a clear research trajectory. Sprint 1
+              showed that input resolution scaling alone could not overcome deployment bottlenecks.
+              Sprint 2 then demonstrated that architecture is the dominant driver of the
+              speed–consistency trade-off. This progression provides a strong foundation for the
+              next research phase focused on architectural efficiency and lightweight deployment strategies.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

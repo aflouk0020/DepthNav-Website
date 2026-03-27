@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DepthNav Research | Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+
+    <script
+      src="https://kit.fontawesome.com/836a943e18.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav-brand">
+            <a href="index.html" class="brand">
+              <img src="assets/images/logo.JPG" alt="DepthNav Research Logo" class="logo" />
+              <span class="brand-text">DepthNav Research</span>
+            </a>
+          </div>
+
+          <div class="burger-menu-icon">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="overview.html" class="nav-link">Overview</a></li>
+            <li class="nav-item"><a href="methodology.html" class="nav-link">Methodology</a></li>
+            <li class="nav-item"><a href="results.html" class="nav-link">Results</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+            <li class="nav-item">
+              <a href="https://github.com/aflouk0020" target="_blank" class="nav-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="overview" class="overview">
+        <div class="container">
+          <div class="section-header">
+            <h2>Project Overview</h2>
+            <p>Understanding the problem, motivation, and research objective</p>
+          </div>
+
+          <div class="overview-content">
+            <div class="overview-text">
+              <h3>Problem Context</h3>
+              <p>
+                Monocular depth estimation provides a low-cost alternative to hardware-based
+                sensing systems such as LiDAR for assistive navigation. However, achieving
+                real-time performance on edge-constrained devices remains a major challenge.
+              </p>
+
+              <h3>Research Objective</h3>
+              <p>
+                This project investigates whether model architecture, rather than input
+                resolution, governs the trade-off between inference speed and structural
+                consistency under deployment constraints.
+              </p>
+
+              <h3>Why This Matters</h3>
+              <p>
+                In assistive navigation, latency and structural reliability are safety-critical.
+                A model that is fast but unreliable can be dangerous, while a model that is
+                accurate but too slow may be unsuitable for real-world deployment.
+              </p>
+
+              <h3>Core Study Design</h3>
+              <p>
+                The research compares a transformer-based model (Depth Anything V2 Small) and
+                a CNN-based model (MiDaS Small) using a controlled benchmark on RTX 2050,
+                supported by cross-device validation on Apple M1 and Raspberry Pi systems.
+              </p>
+            </div>
+
+            <div class="overview-highlights">
+              <div class="highlight">
+                <h4>Research Question</h4>
+                <p>Does architecture drive the speed–accuracy trade-off more strongly than input resolution?</p>
+              </div>
+
+              <div class="highlight">
+                <h4>Models Compared</h4>
+                <p>Depth Anything V2 Small vs MiDaS Small</p>
+              </div>
+
+              <div class="highlight">
+                <h4>Deployment Focus</h4>
+                <p>Edge-constrained, safety-critical assistive navigation</p>
+              </div>
+
+              <div class="highlight">
+                <h4>Key Outcome</h4>
+                <p>No evaluated configuration achieved both real-time speed and acceptable structural reliability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

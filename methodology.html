@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DepthNav Research | Methodology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+
+    <script
+      src="https://kit.fontawesome.com/836a943e18.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav-brand">
+            <a href="index.html" class="brand">
+              <img src="assets/images/logo.JPG" alt="DepthNav Research Logo" class="logo" />
+              <span class="brand-text">DepthNav Research</span>
+            </a>
+          </div>
+
+          <div class="burger-menu-icon">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="overview.html" class="nav-link">Overview</a></li>
+            <li class="nav-item"><a href="methodology.html" class="nav-link">Methodology</a></li>
+            <li class="nav-item"><a href="results.html" class="nav-link">Results</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+            <li class="nav-item">
+              <a href="https://github.com/aflouk0020" target="_blank" class="nav-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="methodology" class="methodology">
+        <div class="container">
+          <div class="section-header">
+            <h2>Methodology</h2>
+            <p>Controlled benchmark design, evaluation workflow, and validation pipeline</p>
+          </div>
+
+          <div class="methodology-top">
+            <div class="methodology-text">
+              <h3>Controlled Evaluation Design</h3>
+              <p>
+                The study evaluates whether model architecture, rather than input
+                resolution, governs the trade-off between inference speed and structural
+                consistency under deployment constraints. A transformer-based model and
+                a CNN-based model were compared under a strictly locked and reproducible protocol.
+              </p>
+
+              <h3>Reference and ROI Strategy</h3>
+              <p>
+                A fixed 1920×1080 reference depth stack was generated once and reused in
+                file-reference mode across all experiments. Performance was evaluated inside
+                a safety-critical Region of Interest (ROI), defined to reflect the ground-level
+                navigation area most relevant for assistive guidance.
+              </p>
+
+              <h3>Benchmark and Validation Layers</h3>
+              <p>
+                The official benchmark was executed on an RTX 2050 using CUDA. Apple M1 and
+                Raspberry Pi were used as validation and feasibility layers to assess
+                reproducibility and deployment behaviour across heterogeneous systems.
+              </p>
+            </div>
+
+            <div class="methodology-side-card">
+              <h4>Core Benchmark Setup</h4>
+              <ul>
+                <li>RTX 2050 (CUDA)</li>
+                <li>Depth Anything V2 Small</li>
+                <li>MiDaS Small</li>
+                <li>1920×1080, 1280×720, 854×480</li>
+                <li>FPS, ROI RMSE, ROI AbsRel</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pipeline-wrapper">
+            <div class="pipeline-step">
+              <div class="step-badge">01</div>
+              <h4>Locked Input</h4>
+              <p>Master video and reference depth stack fixed under a reproducible protocol</p>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="step-badge">02</div>
+              <h4>Architecture Comparison</h4>
+              <p>Transformer and CNN models evaluated at matched resolutions</p>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="step-badge">03</div>
+              <h4>Metric Extraction</h4>
+              <p>Inference throughput and structural consistency measured in the ROI</p>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="step-badge">04</div>
+              <h4>Cross-Device Validation</h4>
+              <p>Reproducibility and feasibility checked across RTX, M1, and Raspberry Pi</p>
+            </div>
+          </div>
+
+          <div class="methodology-metrics">
+            <div class="metric-card">
+              <h4>Primary Variable</h4>
+              <p>Model architecture</p>
+            </div>
+
+            <div class="metric-card">
+              <h4>Controlled Variable</h4>
+              <p>Input resolution</p>
+            </div>
+
+            <div class="metric-card">
+              <h4>Key Metrics</h4>
+              <p>FPS · RMSE · AbsRel</p>
+            </div>
+
+            <div class="metric-card">
+              <h4>Deployment Focus</h4>
+              <p>Edge feasibility</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

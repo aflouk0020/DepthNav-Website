@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DepthNav Research | Resources</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+
+    <script
+      src="https://kit.fontawesome.com/836a943e18.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav-brand">
+            <a href="index.html" class="brand">
+              <img src="assets/images/logo.JPG" alt="DepthNav Research Logo" class="logo" />
+              <span class="brand-text">DepthNav Research</span>
+            </a>
+          </div>
+
+          <div class="burger-menu-icon">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="overview.html" class="nav-link">Overview</a></li>
+            <li class="nav-item"><a href="methodology.html" class="nav-link">Methodology</a></li>
+            <li class="nav-item"><a href="results.html" class="nav-link">Results</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="plans.html" class="nav-link">Plans</a></li>
+            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+            <li class="nav-item">
+              <a href="https://github.com/aflouk0020" target="_blank" rel="noopener noreferrer" class="nav-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="resources" class="resources-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Resources</h2>
+            <p>Project walkthrough video, papers, posters, repository links, and reproducibility materials</p>
+          </div>
+
+          <!-- FEATURED VIDEO -->
+          <div class="resource-card featured-video-card">
+            <h3><i class="fas fa-video"></i> Full Project Walkthrough</h3>
+            <p>
+              This video presents the full research journey from the initial controlled
+              resolution-scaling study through the later architecture-level comparison,
+              including benchmark design, reproducibility controls, results interpretation,
+              and final research outputs.
+            </p>
+
+            <div class="video-placeholder">
+              <div class="video-placeholder-inner">
+                <i class="fas fa-play-circle"></i>
+                <p>Project walkthrough video placeholder</p>
+                <span>Add embedded video or hosted video link here later</span>
+              </div>
+            </div>
+
+            <div class="resource-actions">
+              <a href="#" class="btn">Watch Video</a>
+            </div>
+          </div>
+
+          <!-- PAPERS -->
+            <div class="resource-card">
+            <h3><i class="fas fa-file-alt"></i> Sprint 1 Paper</h3>
+            <p>
+                <strong>Controlled Resolution Scaling Analysis for Transformer-Based Monocular
+                Depth Estimation Under Edge Deployment Constraints</strong>
+            </p>
+            <p>
+                This paper established that input resolution scaling alone does not improve
+                real-time feasibility for the evaluated transformer-based model under a locked protocol.
+            </p>
+
+            <div class="resource-actions">
+                <a href="assets/docs/sprint1-paper.pdf" download class="btn">
+                Download Sprint 1 Paper
+                </a>
+
+                <a href="assets/docs/sprint1-paper.pdf" target="_blank" class="btn btn-secondary">
+                View Paper
+                </a>
+            </div>
+            </div>
+
+          <div class="resource-card">
+            <h3><i class="fas fa-file-alt"></i> Sprint 2 Paper</h3>
+            <p>
+              <strong>Architecture-Level Trade-Off Analysis for Monocular Depth Estimation Under Edge Deployment Constraints</strong>
+            </p>
+            <p>
+              This paper demonstrated that architecture, rather than input resolution,
+              governs the trade-off between inference speed and structural consistency.
+            </p>
+            <div class="resource-actions">
+              <a href="#" class="btn">Download Sprint 2 Paper</a>
+            </div>
+          </div>
+
+          <!-- POSTERS -->
+            <div class="resource-card">
+            <h3><i class="fas fa-image"></i> Sprint 1 Poster</h3>
+            <p>
+                Poster summarising the controlled resolution-scaling study, locked protocol,
+                experimental design, and deployment implications of Sprint 1.
+            </p>
+                            <div class="resource-actions">
+                            <a href="assets/images/sprint1-poster.png" download class="btn">
+                                Download Poster
+                            </a>
+                            <a href="assets/images/sprint1-poster.png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                View Poster
+                            </a>
+                            </div>
+                            </div>
+            <div class="resource-card">
+            <h3><i class="fas fa-image"></i> Sprint 2 Poster</h3>
+            <p>
+                Poster summarising the transformer-versus-CNN architecture comparison,
+                benchmark findings, reproducibility logic, and deployment conclusions of Sprint 2.
+            </p>
+            <div class="resource-actions">
+                <a href="assets/images/sprint2-poster.png" download class="btn">
+                Download Poster
+                </a>
+                <a href="assets/images/sprint2-poster.png" target="_blank" class="btn btn-secondary">
+                View Poster
+                </a>
+            </div>
+            </div>
+
+          <!-- REPOSITORIES -->
+          <div class="resource-card">
+            <h3><i class="fab fa-github"></i> Sprint 1 Repository</h3>
+            <p>
+              This is the core Sprint 1 repository. It contains the merged controlled
+              resolution-scaling study, including the main experiment scripts, configurations,
+              locked protocol structure, and final results used in the core analysis.
+            </p>
+            <div class="resource-actions">
+              <a href="https://github.com/aflouk0020/depth-sprint1-resolution-tradeoff" target="_blank" class="btn">
+                View Core Sprint 1 Repository
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-card">
+            <h3><i class="fab fa-github"></i> Edge Validation Repository</h3>
+            <p>
+              This is the Sprint 1 edge-device extension repository. It contains the
+              Raspberry Pi CPU-based validation work, including edge execution scripts,
+              feasibility evaluation, and extension results that complement the core study.
+            </p>
+            <div class="resource-actions">
+              <a href="https://github.com/aflouk0020/sprint1-pi-edge-validation" target="_blank" class="btn">
+                View Sprint 1 Edge Extension Repository
+              </a>
+            </div>
+          </div>
+
+          <!-- SHARED DATA -->
+          <div class="resource-card">
+            <h3><i class="fas fa-folder-open"></i> Full Project Materials</h3>
+            <p>
+              Access all research artefacts including reports, outputs, logs, and validation results
+              from both Sprint 1 and Sprint 2.
+            </p>
+            <div class="resource-actions">
+              <a href="https://tusmm-my.sharepoint.com/:f:/g/personal/a00293701_student_tus_ie/IgC9TAEB5lsjR6QMxEk8yPxDAf14NsY5XLh7KynAG9MAiIY?e=yfQAud" target="_blank" class="btn">
+                Open Shared Folder
+              </a>
+            </div>
+          </div>
+
+          <!-- CODE -->
+          <div class="resource-card">
+            <h3><i class="fab fa-github"></i> Source Code</h3>
+            <p>
+              The project repository contains the website, code structure, and supporting
+              materials for the DepthNav Research presentation and documentation workflow.
+            </p>
+            <a href="https://github.com/aflouk0020/DepthNav-Website" target="_blank" class="resource-link">
+              View Repository →
+            </a>
+          </div>
+
+          <!-- REPRODUCIBILITY -->
+          <div class="resource-card">
+            <h3><i class="fas fa-sync-alt"></i> Reproducibility Summary</h3>
+            <p>
+              All experiments were conducted under a controlled protocol using locked datasets,
+              frozen reference baselines, fixed naming conventions, and CSV-generated reporting outputs.
+            </p>
+            <ul class="resource-list">
+              <li>Master video locked by SHA256</li>
+              <li>Frozen 1080p reference baselines</li>
+              <li>CSV files as single source of truth</li>
+              <li>Cross-device validation across RTX, M1, and Raspberry Pi</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
