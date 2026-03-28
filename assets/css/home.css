@@ -183,6 +183,7 @@ nav {
   position: relative;
   left: auto;
   top: auto;
+  margin: 0 auto;
   transform: none;
   text-align: center;
   padding: 0 1.5rem 3rem;
