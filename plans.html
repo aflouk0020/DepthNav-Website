@@ -17,6 +17,7 @@
   </head>
 
   <body>
+            <div class="page-progress-bar"></div>
     <header>
       <div class="container">
         <nav>
@@ -68,11 +69,37 @@
               and do not redefine official benchmark conclusions.
             </p>
           </div>
+<div class="plans-summary-strip">
+  <div class="summary-pill">
+    <span class="summary-number">4</span>
+    <span class="summary-label">Inherited Plans</span>
+  </div>
+
+  <div class="summary-pill">
+    <span class="summary-number">2</span>
+    <span class="summary-label">Core Studies</span>
+  </div>
+
+  <div class="summary-pill">
+    <span class="summary-number">2</span>
+    <span class="summary-label">Validation Extensions</span>
+  </div>
+
+  <div class="summary-pill">
+    <span class="summary-number">1</span>
+    <span class="summary-label">Master Protocol</span>
+  </div>
+</div>
 
           <div class="master-locks-card">
             <h3>Global Locks</h3>
             <div class="locks-grid">
               <div class="lock-item">
+
+                  <div class="lock-icon">
+                    <i class="fas fa-video"></i>
+                  </div>
+
                 <h4>Master Video</h4>
                 <p>S2_Main_Approach_h264.mp4</p>
                 <p>1920×1080 · 313 frames · 30 FPS</p>
@@ -80,6 +107,9 @@
               </div>
 
               <div class="lock-item">
+                <div class="lock-icon">
+                  <i class="fas fa-layer-group"></i>
+                </div>
                 <h4>Reference Baselines</h4>
                 <p>Frozen 1080p reference stacks</p>
                 <p>Used in file-reference mode</p>
@@ -87,6 +117,9 @@
               </div>
 
               <div class="lock-item">
+                <div class="lock-icon">
+                  <i class="fas fa-table"></i>
+                </div>
                 <h4>Outputs & CSV Rules</h4>
                 <p>All final CSV files saved in outputs/csv/</p>
                 <p>Tables and figures generated only from final CSV outputs</p>
@@ -94,6 +127,10 @@
               </div>
 
               <div class="lock-item">
+
+                <div class="lock-icon">
+                  <i class="fas fa-code"></i>
+                </div>
                 <h4>Standard Naming</h4>
                 <p>run_id: {model_label}_{backend}_{resolution}_{frames_n}_{gitsha}</p>
                 <p>Resolution strings fixed across all studies</p>

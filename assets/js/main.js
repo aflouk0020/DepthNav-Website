@@ -114,3 +114,117 @@ navLinks.forEach((link) => {
     });
   });
 });
+
+/* --------------------------------------------------
+   PAGE PROGRESS BAR
+-------------------------------------------------- */
+const progressBar = document.querySelector(".page-progress-bar");
+
+const updateProgressBar = () => {
+  if (!progressBar) return;
+
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+  progressBar.style.width = `${progress}%`;
+};
+
+window.addEventListener("scroll", updateProgressBar);
+window.addEventListener("load", updateProgressBar);
+
+/* --------------------------------------------------
+   SCROLL REVEAL
+-------------------------------------------------- */
+const revealTargets = document.querySelectorAll(`
+  .highlight,
+  .lock-item,
+  .plan-card,
+  .branch-card,
+  .result-summary-card,
+  .chart-card,
+  .resource-card,
+  .team-card,
+  .supervisor-card,
+  .pipeline-stage,
+  .pipeline-step,
+  .metric-card,
+  .methodology-figure-card,
+  .plans-summary-strip,
+  .plans-intro-card,
+  .master-locks-card,
+  .inheritance-structure-card,
+  .protocol-note-card,
+  .results-insight-block,
+  .results-table-card,
+  .results-conclusion-card,
+  .poster-preview-card,
+  .team-intro-card
+`);
+
+revealTargets.forEach((item, index) => {
+  item.classList.add("reveal-on-scroll");
+  item.classList.add(`reveal-delay-${(index % 4) + 1}`);
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px",
+  }
+);
+
+revealTargets.forEach((item) => revealObserver.observe(item));
+
+
+/* --------------------------------------------------
+   HERO COUNTER ANIMATION
+-------------------------------------------------- */
+const animateCounter = (element) => {
+  const target = parseInt(element.dataset.target, 10);
+  const duration = 1200;
+  const start = 0;
+  const startTime = performance.now();
+
+  const updateCounter = (currentTime) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    const value = Math.floor(start + (target - start) * progress);
+    element.textContent = value;
+
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.textContent = target;
+    }
+  };
+
+  requestAnimationFrame(updateCounter);
+};
+
+const heroCounters = document.querySelectorAll(".hero-stat-number");
+
+if (heroCounters.length > 0) {
+  const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  heroCounters.forEach((counter) => counterObserver.observe(counter));
+}
