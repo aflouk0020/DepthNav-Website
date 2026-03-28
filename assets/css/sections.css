@@ -787,78 +787,7 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
-/* ===== FEATURED VIDEO / RESOURCE ENHANCEMENTS ===== */
 
-.featured-video-card {
-  margin-bottom: 2.8rem;
-}
-
-.video-placeholder {
-  margin: 2rem 0;
-  min-height: 320px;
-  border-radius: 18px;
-  border: 1px dashed rgba(125, 211, 252, 0.32);
-  background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(17, 24, 39, 0.9) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-}
-
-.video-placeholder-inner {
-  text-align: center;
-  max-width: 52rem;
-}
-
-.video-placeholder-inner i {
-  font-size: 4.8rem;
-  color: #38bdf8;
-  margin-bottom: 1.4rem;
-  display: block;
-}
-
-.video-placeholder-inner p {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.7rem;
-}
-
-.video-placeholder-inner span {
-  display: block;
-  font-size: 1.2rem;
-  color: #9ca3af;
-  line-height: 1.7;
-}
-
-.resource-card strong {
-  color: #ffffff;
-}
-
-.resource-card i {
-  margin-right: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .video-placeholder {
-    min-height: 240px;
-    padding: 1.5rem;
-  }
-
-  .video-placeholder-inner i {
-    font-size: 3.8rem;
-  }
-
-  .video-placeholder-inner p {
-    font-size: 1.3rem;
-  }
-
-  .video-placeholder-inner span {
-    font-size: 1.1rem;
-  }
-}
 
 /* ===== POSTER PREVIEW ===== */
 
