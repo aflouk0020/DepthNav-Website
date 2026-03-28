@@ -95,7 +95,7 @@
             </div>
           </div>
 
-          <div class="results-insight-block">
+         <div class="results-insight-block">
             <h3>Sprint 1 Interpretation</h3>
             <p>
               Sprint 1 shows that resolution scaling alone does not shift the speed–consistency
@@ -108,8 +108,11 @@
           <div class="charts-grid">
             <div class="chart-card">
               <h4>ROI RMSE vs Resolution</h4>
-              <div class="chart-placeholder">
-                <p>Insert Sprint 1 ROI RMSE figure here</p>
+              <div class="chart-figure">
+                <img
+                  src="assets/images/results/sprint1/s1_rmse_roi_vs_resolution.png"
+                  alt="Sprint 1 ROI RMSE versus resolution comparison"
+                />
               </div>
               <p class="chart-caption">
                 Progressive degradation in safety-critical ROI consistency was observed as resolution decreased.
@@ -118,8 +121,11 @@
 
             <div class="chart-card">
               <h4>FPS vs Resolution</h4>
-              <div class="chart-placeholder">
-                <p>Insert Sprint 1 FPS figure here</p>
+              <div class="chart-figure">
+                <img
+                  src="assets/images/results/sprint1/s1_fps_vs_resolution.png"
+                  alt="Sprint 1 inference speed versus resolution on RTX 2050"
+                />
               </div>
               <p class="chart-caption">
                 Official RTX throughput remained effectively constant across the tested resolution band.
@@ -128,8 +134,11 @@
 
             <div class="chart-card">
               <h4>Speed–Accuracy Trade-Off</h4>
-              <div class="chart-placeholder">
-                <p>Insert Sprint 1 Pareto figure here</p>
+              <div class="chart-figure">
+                <img
+                  src="assets/images/results/sprint1/s1_tradeoff_fps_vs_rmse_roi.png"
+                  alt="Sprint 1 speed versus accuracy trade-off in the ROI"
+                />
               </div>
               <p class="chart-caption">
                 No configuration provided a meaningful speed–accuracy improvement under the locked protocol.
@@ -137,56 +146,66 @@
             </div>
 
             <div class="chart-card">
-              <h4>Protocol Diagram Placeholder</h4>
-              <div class="chart-placeholder">
-                <p>Insert Sprint 1 experimental protocol diagram here</p>
+              <h4>ROI AbsRel vs Resolution</h4>
+              <div class="chart-figure">
+                <img
+                  src="assets/images/results/sprint1/s1_absrel_roi_vs_resolution.png"
+                  alt="Sprint 1 ROI AbsRel versus resolution comparison"
+                />
               </div>
               <p class="chart-caption">
-                Use this area for the visual workflow diagram or benchmark structure graphic.
+                Relative error remained low under moderate downsampling but still showed degradation as resolution decreased.
               </p>
             </div>
           </div>
 
-          <div class="results-table-card">
-            <h3>Sprint 1 Paper Summary</h3>
-            <p>
-              The first sprint paper, <em>Controlled Resolution Scaling Analysis for Transformer-Based
-              Monocular Depth Estimation Under Edge Deployment Constraints</em>, established that
-              controlled input downsampling does not improve real-time viability for the evaluated
-              transformer-based model under a locked reference protocol.
-            </p>
-            <div class="resource-actions">
-              <a href="#" class="btn">Download Sprint 1 Paper</a>
-            </div>
+        <div class="results-table-card">
+          <h3>Sprint 1 Paper Summary</h3>
+          <p>
+            The first sprint paper, <em>Controlled Resolution Scaling Analysis for Transformer-Based
+            Monocular Depth Estimation Under Edge Deployment Constraints</em>, established that
+            controlled input downsampling does not improve real-time viability for the evaluated
+            transformer-based model under a locked reference protocol.
+          </p>
+          <div class="resource-actions">
+            <a href="assets/docs/sprint1-paper.pdf" class="btn" download>
+              Download Sprint 1 Paper
+            </a>
+          </div>
+        </div>
+
+        <div class="poster-preview-card">
+          <h3>Sprint 1 Poster</h3>
+          <p>
+            This poster summarises the first sprint study, including motivation, locked protocol,
+            controlled benchmark design, and the conclusion that input scaling alone cannot overcome
+            architectural bottlenecks.
+          </p>
+
+          <div class="poster-preview">
+            <img
+              src="assets/images/sprint1-poster.png"
+              alt="Sprint 1 poster preview"
+            />
           </div>
 
-          <div class="poster-preview-card">
-            <h3>Sprint 1 Poster</h3>
-            <p>
-              This poster summarises the first sprint study, including motivation, locked protocol,
-              controlled benchmark design, and the conclusion that input scaling alone cannot overcome
-              architectural bottlenecks.
-            </p>
-
-            <div class="poster-diagram-placeholder">
-              <p>Insert Sprint 1 poster preview or poster image here</p>
-            </div>
-
-            <div class="poster-text-summary">
-              <h4>Poster Focus</h4>
-              <ul class="resource-list">
-                <li>Problem context and deployment motivation</li>
-                <li>Controlled resolution-scaling protocol</li>
-                <li>Locked reference-based evaluation</li>
-                <li>Cross-device validation structure</li>
-                <li>Conclusion and future architectural study direction</li>
-              </ul>
-            </div>
-
-            <div class="resource-actions">
-              <a href="#" class="btn btn-secondary">Download Sprint 1 Poster</a>
-            </div>
+          <div class="poster-text-summary">
+            <h4>Poster Focus</h4>
+            <ul class="resource-list">
+              <li>Problem context and deployment motivation</li>
+              <li>Controlled resolution-scaling protocol</li>
+              <li>Locked reference-based evaluation</li>
+              <li>Cross-device validation structure</li>
+              <li>Conclusion and future architectural study direction</li>
+            </ul>
           </div>
+
+          <div class="resource-actions">
+            <a href="assets/images/sprint1-poster.png" class="btn btn-secondary" download>
+              Download Sprint 1 Poster
+            </a>
+          </div>
+        </div>
 
           <!-- SPRINT 2 -->
           <div class="results-sprint-header">
@@ -234,47 +253,68 @@
             </p>
           </div>
 
-          <div class="charts-grid">
-            <div class="chart-card">
-              <h4>Architecture Throughput Comparison</h4>
-              <div class="chart-placeholder">
-                <p>Insert Sprint 2 throughput figure here</p>
-              </div>
-              <p class="chart-caption">
-                CNN throughput exceeded transformer performance at all resolutions, especially at 854×480.
-              </p>
-            </div>
 
-            <div class="chart-card">
-              <h4>ROI RMSE Across Architectures</h4>
-              <div class="chart-placeholder">
-                <p>Insert Sprint 2 ROI RMSE figure here</p>
-              </div>
-              <p class="chart-caption">
-                Transformer consistency remained stable, while the CNN exhibited extreme structural instability.
-              </p>
-            </div>
 
-            <div class="chart-card">
-              <h4>ROI AbsRel Across Architectures</h4>
-              <div class="chart-placeholder">
-                <p>Insert Sprint 2 ROI AbsRel figure here</p>
-              </div>
-              <p class="chart-caption">
-                Relative error remained substantially lower for the transformer across all matched resolutions.
-              </p>
-            </div>
 
-            <div class="chart-card">
-              <h4>Sprint 2 Diagram Placeholder</h4>
-              <div class="chart-placeholder">
-                <p>Insert Sprint 2 protocol / comparison diagram here</p>
-              </div>
-              <p class="chart-caption">
-                Use this placeholder for the architecture comparison workflow or poster diagram.
-              </p>
+
+
+
+        <div class="charts-grid">
+          <div class="chart-card">
+            <h4>FPS vs Resolution</h4>
+            <div class="chart-figure">
+              <img
+                src="assets/images/results/sprint2/s2_fps_vs_resolution.png"
+                alt="Sprint 2 inference speed versus resolution comparison"
+              />
             </div>
+            <p class="chart-caption">
+              The CNN baseline achieved substantially higher throughput, while the transformer remained below real-time requirements.
+            </p>
           </div>
+
+          <div class="chart-card">
+            <h4>ROI RMSE vs Resolution</h4>
+            <div class="chart-figure">
+              <img
+                src="assets/images/results/sprint2/s2_rmse_vs_resolution.png"
+                alt="Sprint 2 ROI RMSE comparison across architectures"
+              />
+            </div>
+            <p class="chart-caption">
+              Transformer outputs remained structurally stable, whereas the CNN showed severe degradation in the safety-critical ROI.
+            </p>
+          </div>
+
+          <div class="chart-card">
+            <h4>ROI AbsRel vs Resolution</h4>
+            <div class="chart-figure">
+              <img
+                src="assets/images/results/sprint2/s2_absrel_vs_resolution.png"
+                alt="Sprint 2 ROI AbsRel comparison across architectures"
+              />
+            </div>
+            <p class="chart-caption">
+              Relative error remained consistently lower for the transformer across all tested resolutions.
+            </p>
+          </div>
+
+          <div class="chart-card">
+            <h4>Speed–Accuracy Trade-Off (Pareto)</h4>
+            <div class="chart-figure">
+              <img
+                src="assets/images/results/sprint2/s2_tradeoff_fps_vs_rmse.png"
+                alt="Sprint 2 Pareto trade-off between speed and accuracy"
+              />
+            </div>
+            <p class="chart-caption">
+              No evaluated configuration achieved both acceptable structural consistency and real-time throughput.
+            </p>
+          </div>
+        </div>
+
+
+
 
           <div class="results-table-card">
             <h3>Sprint 2 Paper Summary</h3>
@@ -394,6 +434,11 @@
               speed–consistency trade-off. This progression provides a strong foundation for the
               next research phase focused on architectural efficiency and lightweight deployment strategies.
             </p>
+          </div>
+          <div class="page-next">
+            <a href="team.html" class="scroll-down" aria-label="Go to team page">
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </section>

@@ -863,7 +863,9 @@
 /* ===== POSTER PREVIEW ===== */
 
 .poster-preview {
-  margin: 1.8rem 0;
+  margin: 1.8rem auto;
+  max-width: 500px;
+  max-height: 780px;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -880,4 +882,327 @@
 .poster-preview:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== METHODOLOGY DIAGRAM ===== */
+
+.methodology-figure-card {
+  margin: 3.5rem 0 4rem;
+  padding: 2.4rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+}
+
+.methodology-figure-header {
+  margin-bottom: 1.8rem;
+}
+
+.methodology-figure-header h3 {
+  font-size: 1.8rem;
+  color: #38bdf8;
+  margin-bottom: 0.8rem;
+}
+
+.methodology-figure-header p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+.methodology-figure {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.methodology-figure {
+  display: flex;
+  justify-content: center;
+}
+
+.methodology-figure img {
+  width: 100%;
+  max-width: 900px;   /* 🔥 controls size */
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.figure-caption {
+  margin-top: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .methodology-figure-card {
+    padding: 1.8rem;
+  }
+
+  .methodology-figure-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .methodology-figure-header p,
+  .figure-caption {
+    font-size: 1.15rem;
+  }
+}
+.chart-figure {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.chart-figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart-card {
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== ENHANCED TEAM PAGE ===== */
+
+
+
+.supervisor-block {
+  margin-bottom: 4rem;
+}
+
+.supervisor-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.4rem;
+  align-items: center;
+  padding: 2.6rem;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  border: 1px solid rgba(125, 211, 252, 0.16);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.supervisor-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.supervisor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.supervisor-content h3 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.role-badge {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  color: #bae6fd;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.team-link-placeholder {
+  font-size: 1.15rem;
+  color: #9ca3af;
+  margin-top: 1rem;
+}
+
+.team-members-block {
+  margin-top: 1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+}
+
+.team-card {
+  position: relative;
+  padding: 2.4rem;
+  border-radius: 22px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.28);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+}
+
+.team-photo {
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto 1.6rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* keep avatar as fallback / visual badge */
+.team-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1fb6ff 0%, #0284c7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.28);
+}
+
+.team-card h3 {
+  font-size: 1.75rem;
+  color: #ffffff;
+  margin-bottom: 0.7rem;
+}
+
+.team-role {
+  font-size: 1.2rem;
+  color: #7dd3fc;
+  margin-bottom: 1rem;
+}
+
+.team-description {
+  font-size: 1.24rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 1.2rem;
+}
+
+.team-link {
+  display: inline-block;
+  font-size: 1.15rem;
+  color: #7dd3fc;
+  word-break: break-word;
+}
+
+.team-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 1000px) {
+  .supervisor-card {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .supervisor-card,
+  .team-card {
+    padding: 2rem;
+  }
+
+  .supervisor-content h3 {
+    font-size: 1.9rem;
+  }
+
+  .team-card h3 {
+    font-size: 1.55rem;
+  }
+
+  .team-photo,
+  .supervisor-photo {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.degree-badge {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  color: #7dd3fc;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.degree-badge.supervisor {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
 }
