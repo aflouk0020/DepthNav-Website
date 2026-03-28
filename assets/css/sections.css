@@ -1206,3 +1206,40 @@
   border: 1px solid rgba(245, 158, 11, 0.3);
   color: #fbbf24;
 }
+
+.team-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.16) 0%,
+    rgba(15, 23, 42, 0.85) 100%
+  );
+  border: 1px solid rgba(125, 211, 252, 0.22);
+}
+
+.team-photo-placeholder span {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+}
+.supervisor-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.18) 0%,
+    rgba(15, 23, 42, 0.9) 100%
+  );
+  border: 1px solid rgba(245, 158, 11, 0.28);
+}
+
+.supervisor-photo-placeholder span {
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+}
