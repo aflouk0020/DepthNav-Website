@@ -53,146 +53,161 @@
     </header>
 
     <main class="page-main">
-      <section id="resources" class="resources-section">
-        <div class="container">
-          <div class="section-header">
-            <h2>Resources</h2>
-              <p>Papers, posters, repository links, shared materials, and reproducibility resources</p>
+    <section id="resources" class="resources-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Resources</h2>
+      <p>Papers, posters, repository links, shared materials, and reproducibility resources</p>
+    </div>
+
+    <!-- PUBLICATIONS -->
+    <div class="resource-group">
+      <div class="resource-group-header">
+        <h3>Publications</h3>
+        <p>Research papers produced across Sprint 1 and Sprint 2.</p>
+      </div>
+
+      <div class="resource-grid">
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fas fa-file-alt"></i> Sprint 1 Paper</h4>
+            <p><strong>Controlled Resolution Scaling Analysis for Transformer-Based Monocular Depth Estimation Under Edge Deployment Constraints</strong></p>
+            <p>
+              This paper established that input resolution scaling alone does not improve
+              real-time feasibility for the evaluated transformer-based model under a locked protocol.
+            </p>
           </div>
+          <div class="resource-actions">
+            <a href="assets/docs/sprint1-paper.pdf" download class="btn">Download</a>
+            <a href="assets/docs/sprint1-paper.pdf" target="_blank" class="btn btn-secondary">View</a>
+          </div>
+        </div>
 
-       
-
-          <!-- PAPERS -->
-            <div class="resource-card">
-            <h3><i class="fas fa-file-alt"></i> Sprint 1 Paper</h3>
-            <p>
-                <strong>Controlled Resolution Scaling Analysis for Transformer-Based Monocular
-                Depth Estimation Under Edge Deployment Constraints</strong>
-            </p>
-            <p>
-                This paper established that input resolution scaling alone does not improve
-                real-time feasibility for the evaluated transformer-based model under a locked protocol.
-            </p>
-
-            <div class="resource-actions">
-                <a href="assets/docs/sprint1-paper.pdf" download class="btn">
-                Download Sprint 1 Paper
-                </a>
-
-                <a href="assets/docs/sprint1-paper.pdf" target="_blank" class="btn btn-secondary">
-                View Paper
-                </a>
-            </div>
-            </div>
-
-          <div class="resource-card">
-            <h3><i class="fas fa-file-alt"></i> Sprint 2 Paper</h3>
-            <p>
-              <strong>Architecture-Level Trade-Off Analysis for Monocular Depth Estimation Under Edge Deployment Constraints</strong>
-            </p>
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fas fa-file-alt"></i> Sprint 2 Paper</h4>
+            <p><strong>Architecture-Level Trade-Off Analysis for Monocular Depth Estimation Under Edge Deployment Constraints</strong></p>
             <p>
               This paper demonstrated that architecture, rather than input resolution,
               governs the trade-off between inference speed and structural consistency.
             </p>
-            <div class="resource-actions">
-              <a href="#" class="btn">Download Sprint 2 Paper</a>
-            </div>
           </div>
-
-          <!-- POSTERS -->
-            <div class="resource-card">
-            <h3><i class="fas fa-image"></i> Sprint 1 Poster</h3>
-            <p>
-                Poster summarising the controlled resolution-scaling study, locked protocol,
-                experimental design, and deployment implications of Sprint 1.
-            </p>
-                            <div class="resource-actions">
-                            <a href="assets/images/sprint1-poster.png" download class="btn">
-                                Download Poster
-                            </a>
-                            <a href="assets/images/sprint1-poster.png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                                View Poster
-                            </a>
-                            </div>
-                            </div>
-            <div class="resource-card">
-            <h3><i class="fas fa-image"></i> Sprint 2 Poster</h3>
-            <p>
-                Poster summarising the transformer-versus-CNN architecture comparison,
-                benchmark findings, reproducibility logic, and deployment conclusions of Sprint 2.
-            </p>
-            <div class="resource-actions">
-                <a href="assets/images/sprint2-poster.png" download class="btn">
-                Download Poster
-                </a>
-                <a href="assets/images/sprint2-poster.png" target="_blank" class="btn btn-secondary">
-                View Poster
-                </a>
-            </div>
-            </div>
-
-          <!-- REPOSITORIES -->
-          <div class="resource-card">
-            <h3><i class="fab fa-github"></i> Sprint 1 Repository</h3>
-            <p>
-              This is the core Sprint 1 repository. It contains the merged controlled
-              resolution-scaling study, including the main experiment scripts, configurations,
-              locked protocol structure, and final results used in the core analysis.
-            </p>
-            <div class="resource-actions">
-              <a href="https://github.com/aflouk0020/depth-sprint1-resolution-tradeoff" target="_blank" class="btn">
-                View Core Sprint 1 Repository
-              </a>
-            </div>
+          <div class="resource-actions">
+            <a href="#" class="btn">Download</a>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="resource-card">
-            <h3><i class="fab fa-github"></i> Edge Validation Repository</h3>
+    <!-- POSTERS -->
+    <div class="resource-group">
+      <div class="resource-group-header">
+        <h3>Posters</h3>
+        <p>Poster artefacts used to communicate the key experimental findings.</p>
+      </div>
+
+      <div class="resource-grid">
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fas fa-image"></i> Sprint 1 Poster</h4>
             <p>
-              This is the Sprint 1 edge-device extension repository. It contains the
+              Poster summarising the controlled resolution-scaling study, locked protocol,
+              experimental design, and deployment implications of Sprint 1.
+            </p>
+          </div>
+          <div class="resource-actions">
+            <a href="assets/images/sprint1-poster.png" download class="btn">Download</a>
+            <a href="assets/images/sprint1-poster.png" target="_blank" class="btn btn-secondary">View</a>
+          </div>
+        </div>
+
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fas fa-image"></i> Sprint 2 Poster</h4>
+            <p>
+              Poster summarising the transformer-versus-CNN architecture comparison,
+              benchmark findings, reproducibility logic, and deployment conclusions of Sprint 2.
+            </p>
+          </div>
+          <div class="resource-actions">
+            <a href="assets/images/sprint2-poster.png" download class="btn">Download</a>
+            <a href="assets/images/sprint2-poster.png" target="_blank" class="btn btn-secondary">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CODE & REPOSITORIES -->
+    <div class="resource-group">
+      <div class="resource-group-header">
+        <h3>Code & Repositories</h3>
+        <p>Core experiment repositories, edge validation work, and website source code.</p>
+      </div>
+
+      <div class="resource-grid">
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fab fa-github"></i> Sprint 1 Repository</h4>
+            <p>
+              Core Sprint 1 repository containing the controlled resolution-scaling study,
+              experiment scripts, locked protocol structure, and final results.
+            </p>
+          </div>
+          <div class="resource-actions">
+            <a href="https://github.com/aflouk0020/depth-sprint1-resolution-tradeoff" target="_blank" class="btn">Open Repository</a>
+          </div>
+        </div>
+
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fab fa-github"></i> Edge Validation Repository</h4>
+            <p>
               Raspberry Pi CPU-based validation work, including edge execution scripts,
-              feasibility evaluation, and extension results that complement the core study.
+              feasibility evaluation, and extension results.
             </p>
-            <div class="resource-actions">
-              <a href="https://github.com/aflouk0020/sprint1-pi-edge-validation" target="_blank" class="btn">
-                View Sprint 1 Edge Extension Repository
-              </a>
-            </div>
           </div>
-
-          <!-- SHARED DATA -->
-          <div class="resource-card">
-            <h3><i class="fas fa-folder-open"></i> Full Project Materials</h3>
-            <p>
-              Access all research artefacts including reports, outputs, logs, and validation results
-              from both Sprint 1 and Sprint 2.
-            </p>
-            <div class="resource-actions">
-              <a href="https://tusmm-my.sharepoint.com/:f:/g/personal/a00293701_student_tus_ie/IgC9TAEB5lsjR6QMxEk8yPxDAf14NsY5XLh7KynAG9MAiIY?e=yfQAud" target="_blank" class="btn">
-                Open Shared Folder
-              </a>
-            </div>
+          <div class="resource-actions">
+            <a href="https://github.com/aflouk0020/sprint1-pi-edge-validation" target="_blank" class="btn">Open Repository</a>
           </div>
+        </div>
 
-          <!-- CODE -->
-          <div class="resource-card">
-            <h3><i class="fab fa-github"></i> Source Code</h3>
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fab fa-github"></i> Website Source Code</h4>
             <p>
-              The project repository contains the website, code structure, and supporting
-              materials for the DepthNav Research presentation and documentation workflow.
+              Source code for the DepthNav Research website and presentation workflow.
             </p>
-            <a href="https://github.com/aflouk0020/DepthNav-Website" target="_blank" class="resource-link">
-              View Repository →
-            </a>
           </div>
+          <div class="resource-actions">
+            <a href="https://github.com/aflouk0020/DepthNav-Website" target="_blank" class="btn">Open Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- REPRODUCIBILITY -->
-          <div class="resource-card">
-            <h3><i class="fas fa-sync-alt"></i> Reproducibility Summary</h3>
+    <!-- DATA & REPRODUCIBILITY -->
+    <div class="resource-group">
+      <div class="resource-group-header">
+        <h3>Data & Reproducibility</h3>
+        <p>Shared artefacts, experiment outputs, and reproducibility notes.</p>
+      </div>
+
+      <div class="resource-grid">
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fas fa-folder-open"></i> Full Project Materials</h4>
             <p>
-              All experiments were conducted under a controlled protocol using locked datasets,
-              frozen reference baselines, fixed naming conventions, and CSV-generated reporting outputs.
+              Access all reports, outputs, logs, and validation results from Sprint 1 and Sprint 2.
             </p>
+          </div>
+          <div class="resource-actions">
+            <a href="https://tusmm-my.sharepoint.com/:f:/g/personal/a00293701_student_tus_ie/IgC9TAEB5lsjR6QMxEk8yPxDAf14NsY5XLh7KynAG9MAiIY?e=yfQAud" target="_blank" class="btn">Open Folder</a>
+          </div>
+        </div>
+
+        <div class="resource-item-card">
+          <div class="resource-item-top">
+            <h4><i class="fas fa-sync-alt"></i> Reproducibility Summary</h4>
             <ul class="resource-list">
               <li>Master video locked by SHA256</li>
               <li>Frozen 1080p reference baselines</li>
@@ -200,13 +215,17 @@
               <li>Cross-device validation across RTX, M1, and Raspberry Pi</li>
             </ul>
           </div>
-          <div class="page-next">
-            <a href="index.html" class="scroll-down" aria-label="Go back to home page">
-              <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </a>
-          </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div class="page-next">
+      <a href="index.html" class="scroll-down" aria-label="Go back to home page">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
     </main>
 
     <script

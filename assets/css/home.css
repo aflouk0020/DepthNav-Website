@@ -707,7 +707,7 @@ nav {
 
 .home-video-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 .home-video-badge {
@@ -742,7 +742,7 @@ nav {
 
 .home-video-frame {
   max-width: 78rem;
-  margin: 1.8rem auto 0;
+  margin: 1.2rem auto 0;
   aspect-ratio: 16 / 9;
   border-radius: 18px;
   overflow: hidden;
@@ -767,7 +767,7 @@ nav {
 }
 
 .home-video-card .page-next {
-  margin-top: 2rem;
+  margin-top: 1.4rem;
   padding-bottom: 0;
 }
 
@@ -863,4 +863,124 @@ nav {
   .page-next .scroll-down i {
     font-size: 4rem;
   }
+}
+
+#project-video {
+  scroll-margin-top: 11rem;
+}
+
+.home-video-section {
+  padding-top: 4rem;
+}
+
+.home-video-card {
+  text-align: center;
+}
+
+/* ===== GUIDED PATH BELOW VIDEO ===== */
+
+.guided-path-card {
+  margin-top: 2.4rem;
+  text-align: center;
+  padding: 2rem 1.6rem 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.guided-path-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+  margin-bottom: 1.4rem;
+}
+
+.guided-path {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.guided-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e5e7eb;
+  font-size: 1.12rem;
+  font-weight: 500;
+  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, color 220ms ease, box-shadow 220ms ease;
+}
+
+.guided-step:hover {
+  color: #ffffff;
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.12);
+}
+
+
+.guided-path-note {
+  max-width: 72rem;
+  margin: 1.5rem auto 0;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .guided-path-card {
+    padding: 1.8rem 1rem 1rem;
+  }
+
+  .guided-step {
+    font-size: 1rem;
+    padding: 0.75rem 1.15rem;
+  }
+
+  .guided-arrow {
+    font-size: 1.25rem;
+  }
+
+  .guided-path-note {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .guided-path {
+    gap: 0.7rem;
+  }
+
+  .guided-step {
+    width: 100%;
+    max-width: 24rem;
+  }
+
+  .guided-arrow {
+    display: none;
+  }
+}
+
+.guided-step.active {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+}
+.guided-arrow {
+  font-size: 1.5rem;
+  color: rgba(125, 211, 252, 0.75);
+  animation: flowArrow 2s ease-in-out infinite;
+}
+
+@keyframes flowArrow {
+  0%, 100% { opacity: 0.4; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(6px); }
 }
