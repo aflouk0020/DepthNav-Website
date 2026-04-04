@@ -134,7 +134,7 @@
             </div>
 
             <div>
-<a href="#project-video" class="scroll-down" aria-label="Go to project video section">
+                <a href="#interactive-demo" class="scroll-down" aria-label="Go to interactive demo section">
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
               </a>
             </div>
@@ -157,6 +157,99 @@
 
         <div class="slider"></div>
       </section>
+
+
+
+
+            <section id="interactive-demo" class="interactive-demo-section">
+            <div class="container">
+              <div class="interactive-demo-card">
+                <div class="interactive-demo-header">
+                  <span class="interactive-demo-badge">Live Interactive Demo</span>
+                  <h2>Explore the Architecture Trade-Off</h2>
+                  <p>
+                    Interact with a simplified research demo to compare how different
+                    model architectures behave across representative scenes. Switch between
+                    sample inputs and view the contrast between transformer-based and
+                    CNN-based depth estimation outputs.
+                  </p>
+                </div>
+
+                <div class="demo-controls">
+                  <div class="demo-control-group">
+                    <label for="scene-select">Select Scene</label>
+                    <select id="scene-select" class="demo-select">
+                      <option value="indoor">Indoor Scene</option>
+                      <option value="outdoor">Outdoor Path</option>
+                      <option value="obstacle">Obstacle Case</option>
+                    </select>
+                  </div>
+
+                  <div class="demo-control-group">
+                    <label for="model-select">Select Model</label>
+                    <select id="model-select" class="demo-select">
+                      <option value="transformer">Transformer</option>
+                      <option value="cnn">CNN</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="demo-viewer-grid">
+                  <div class="demo-panel">
+                    <h3>Scene Input</h3>
+                    <div class="demo-image-frame">
+                      <img
+                        id="demo-input-image"
+                        src="assets/images/demo/indoor/input.png"
+                        alt="Demo input scene"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="demo-panel">
+                  <h3>Model Output</h3>
+                    <div class="demo-image-frame">
+                      <img
+                        id="demo-output-image"
+                        src="assets/images/demo/indoor/transformer.png"
+                        alt="Predicted depth output"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-insights-grid">
+                  <div class="demo-metric-card">
+                    <span class="demo-metric-label">Model Type</span>
+                    <span id="demo-model-type" class="demo-metric-value">Transformer</span>
+                  </div>
+
+                  <div class="demo-metric-card">
+                    <span class="demo-metric-label">Expected Behaviour</span>
+                    <span id="demo-expected-behaviour" class="demo-metric-value">
+                      Higher structural consistency
+                    </span>
+                  </div>
+
+                  <div class="demo-metric-card">
+                    <span class="demo-metric-label">Deployment Trade-Off</span>
+                    <span id="demo-tradeoff" class="demo-metric-value">
+                      Slower, but more reliable
+                    </span>
+                  </div>
+                </div>
+
+                <div class="demo-interpretation-card">
+                  <h3>Interpretation</h3>
+                  <p id="demo-interpretation-text">
+                    In this example, the transformer-based model preserves stronger structural
+                    consistency, which supports safer interpretation of scene geometry, but
+                    this comes at the cost of lower inference speed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
 
       <section id="project-video" class="home-video-section">
         <div class="container">
@@ -214,95 +307,7 @@
           </div>
         </div>
       </section>
-      <section id="interactive-demo" class="interactive-demo-section">
-  <div class="container">
-    <div class="interactive-demo-card">
-      <div class="interactive-demo-header">
-        <span class="interactive-demo-badge">Live Interactive Demo</span>
-        <h2>Explore the Architecture Trade-Off</h2>
-        <p>
-          Interact with a simplified research demo to compare how different
-          model architectures behave across representative scenes. Switch between
-          sample inputs and view the contrast between transformer-based and
-          CNN-based depth estimation outputs.
-        </p>
-      </div>
 
-      <div class="demo-controls">
-        <div class="demo-control-group">
-          <label for="scene-select">Select Scene</label>
-          <select id="scene-select" class="demo-select">
-            <option value="indoor">Indoor Scene</option>
-            <option value="outdoor">Outdoor Path</option>
-            <option value="obstacle">Obstacle Case</option>
-          </select>
-        </div>
-
-        <div class="demo-control-group">
-          <label for="model-select">Select Model</label>
-          <select id="model-select" class="demo-select">
-            <option value="transformer">Transformer</option>
-            <option value="cnn">CNN</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="demo-viewer-grid">
-        <div class="demo-panel">
-          <h3>Scene Input</h3>
-          <div class="demo-image-frame">
-            <img
-              id="demo-input-image"
-              src="assets/images/demo/indoor/input.png"
-              alt="Demo input scene"
-            />
-          </div>
-        </div>
-
-        <div class="demo-panel">
-        <h3>Model Output</h3>
-          <div class="demo-image-frame">
-            <img
-              id="demo-output-image"
-              src="assets/images/demo/indoor/transformer.png"
-              alt="Predicted depth output"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="demo-insights-grid">
-        <div class="demo-metric-card">
-          <span class="demo-metric-label">Model Type</span>
-          <span id="demo-model-type" class="demo-metric-value">Transformer</span>
-        </div>
-
-        <div class="demo-metric-card">
-          <span class="demo-metric-label">Expected Behaviour</span>
-          <span id="demo-expected-behaviour" class="demo-metric-value">
-            Higher structural consistency
-          </span>
-        </div>
-
-        <div class="demo-metric-card">
-          <span class="demo-metric-label">Deployment Trade-Off</span>
-          <span id="demo-tradeoff" class="demo-metric-value">
-            Slower, but more reliable
-          </span>
-        </div>
-      </div>
-
-      <div class="demo-interpretation-card">
-        <h3>Interpretation</h3>
-        <p id="demo-interpretation-text">
-          In this example, the transformer-based model preserves stronger structural
-          consistency, which supports safer interpretation of scene geometry, but
-          this comes at the cost of lower inference speed.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
     </main>
 
     <script
