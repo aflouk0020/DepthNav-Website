@@ -239,3 +239,118 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+
+/* --------------------------------------------------
+   LIVE INTERACTIVE DEMO
+-------------------------------------------------- */
+const sceneSelect = document.getElementById("scene-select");
+const modelSelect = document.getElementById("model-select");
+
+const demoInputImage = document.getElementById("demo-input-image");
+const demoOutputImage = document.getElementById("demo-output-image");
+
+const demoModelType = document.getElementById("demo-model-type");
+const demoExpectedBehaviour = document.getElementById("demo-expected-behaviour");
+const demoTradeoff = document.getElementById("demo-tradeoff");
+const demoInterpretationText = document.getElementById("demo-interpretation-text");
+
+const demoData = {
+  indoor: {
+    input: "assets/images/demo/indoor/input.png",
+    transformer: "assets/images/demo/indoor/transformer.png",
+    cnn: "assets/images/demo/indoor/cnn.png",
+    transformerText: {
+      modelType: "Transformer",
+      expected: "Higher structural consistency",
+      tradeoff: "Slower, but more reliable",
+      interpretation:
+        "In this indoor scene, the transformer-based model preserves stronger structural consistency across furniture and room boundaries, producing a clearer representation of spatial layout at the cost of lower inference speed."
+    },
+    cnnText: {
+      modelType: "CNN",
+      expected: "Faster but less stable output",
+      tradeoff: "Faster, but less reliable",
+      interpretation:
+        "In this indoor scene, the CNN-based model produces a faster output, but object boundaries and spatial layout appear less stable, reducing interpretability in cluttered environments."
+    }
+  },
+
+  outdoor: {
+    input: "assets/images/demo/outdoor/input.png",
+    transformer: "assets/images/demo/outdoor/transformer.png",
+    cnn: "assets/images/demo/outdoor/cnn.png",
+    transformerText: {
+      modelType: "Transformer",
+      expected: "Clearer scene geometry",
+      tradeoff: "Slower, but more reliable",
+      interpretation:
+        "In the outdoor example, the transformer-based model better preserves depth layering across the path, vegetation, and distant background, supporting more reliable scene understanding for navigation."
+    },
+    cnnText: {
+      modelType: "CNN",
+      expected: "Higher speed with reduced consistency",
+      tradeoff: "Faster, but less reliable",
+      interpretation:
+        "In the outdoor example, the CNN-based model runs faster, but the depth structure is less stable across the scene, making boundary interpretation and distance relationships less dependable."
+    }
+  },
+
+  obstacle: {
+    input: "assets/images/demo/obstacle/input.png",
+    transformer: "assets/images/demo/obstacle/transformer.png",
+    cnn: "assets/images/demo/obstacle/cnn.png",
+    transformerText: {
+      modelType: "Transformer",
+      expected: "Reliable obstacle separation",
+      tradeoff: "Slower, but more reliable",
+      interpretation:
+        "In the obstacle case, the transformer-based model separates the cone more clearly from the surrounding floor and background, demonstrating stronger structural clarity in a safety-critical scenario."
+    },
+    cnnText: {
+      modelType: "CNN",
+      expected: "Noisier obstacle boundaries",
+      tradeoff: "Faster, but less reliable",
+      interpretation:
+        "In the obstacle case, the CNN-based model produces a noisier depth estimate with weaker obstacle boundaries, increasing the risk of misinterpretation in navigation-focused use cases."
+    }
+  }
+};
+
+function updateInteractiveDemo() {
+  if (
+    !sceneSelect ||
+    !modelSelect ||
+    !demoInputImage ||
+    !demoOutputImage ||
+    !demoModelType ||
+    !demoExpectedBehaviour ||
+    !demoTradeoff ||
+    !demoInterpretationText
+  ) {
+    return;
+  }
+
+  const selectedScene = sceneSelect.value;
+  const selectedModel = modelSelect.value;
+
+  const scene = demoData[selectedScene];
+  const modelInfo =
+    selectedModel === "transformer" ? scene.transformerText : scene.cnnText;
+
+  demoInputImage.src = scene.input;
+  demoInputImage.alt = `${selectedScene} demo input scene`;
+
+  demoOutputImage.src = scene[selectedModel];
+  demoOutputImage.alt = `${selectedScene} ${selectedModel} predicted depth output`;
+
+  demoModelType.textContent = modelInfo.modelType;
+  demoExpectedBehaviour.textContent = modelInfo.expected;
+  demoTradeoff.textContent = modelInfo.tradeoff;
+  demoInterpretationText.textContent = modelInfo.interpretation;
+}
+
+if (sceneSelect && modelSelect) {
+  sceneSelect.addEventListener("change", updateInteractiveDemo);
+  modelSelect.addEventListener("change", updateInteractiveDemo);
+  updateInteractiveDemo();
+}
